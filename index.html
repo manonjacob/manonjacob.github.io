@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="src/style.css" rel="stylesheet">
+    <script src="src/jquery.js"></script>
+    <script src="src/script.js"></script>
+    <script src="src/lightbox.js"></script>
+    <link rel="shortcut icon" href="src/img/icon.png" type="image/png" />
+    <title>MANON JACOB</title>
+    <meta name="description" content="MANON JACOB | Official Website">
+
+</head>
+
+<body>
+
+    <noscript><div id="noscript">This site requires JavaScript. Please enable JavaScript in your Browser.</div></noscript>
+
+    <header>
+        <a id="active" href="/">MANON JACOB</a>
+        <nav>
+            <div>
+                <a href="2017-huile-sur-toile">2017</a></div>
+            <div><a href="2016-huile-sur-toile">2016</a></div>
+            <div><a href="2015-huile-sur-papier">2015</a></div>
+            <div><a href="formation">CV</a></div>
+        </nav>
+    </header>
+
+    <main id="front">
+        <figure id="figure01"><a id="link01" href="images/!front/front.jpg" data-lightbox="0"><img id="image01" src="images/!front/front.jpg" alt="" onload="$.ajax({ url: 'images/!front/front.txt', type: 'get', dataType: 'text', async: false, success: function (title01) { $('#link01').attr('data-title', title01) }}); $('#figure01').css({ display: 'inline-flex' });" /></a></figure>
+    </main>
+
+    <footer>
+        <div>© 2017 Manon Jacob</div>
+    </footer>
+
+</body>
+</html>
