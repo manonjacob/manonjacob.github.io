@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="src/style.css" rel="stylesheet">
+    <script src="src/jquery.js"></script>
+    <script src="src/scroll.js"></script>
+    <script src="src/script.js"></script>
+    <script src="src/lightbox.js"></script>
+    <link rel="shortcut icon" href="src/img/icon.png" type="image/png" />
+    <title>MANON JACOB | PAINTING | oil on canvas </title>
+    <meta name="robots" content="noindex" />
+</head>
+
+<body>
+
+    <noscript><div id="noscript">This site requires JavaScript. Please enable JavaScript in your Browser.</div></noscript>
+
+    <header>
+        <a href="/">MANON JACOB</a>
+        <nav>
+            <div><a id="active" href="2017-huile-sur-toile">PAINTING</a><div>
+                
+                <div><a id="active" href="2017-huile-sur-toile">exhibition</a><div>
+            </div>
+            <div><a href="formation">CV</a></div>
+        </nav>
+    </header>
+
+    <div id="load"><img src="src/img/loading.gif" /></div>
+
+    <div id="buttonleft"><img src="src/img/prev.png" /></div>
+    <div id="buttonright"><img src="src/img/next.png" /></div>
+
+    <main id="images">
+        <div id="imagescontainer">
+            </figure>
+            <figure id="figure01"><a id="link01" href="images/exhibition/01.jpg"><img id="image01" src="images/2017-huile-sur-toile/exhibition/01.jpg" alt="" onload="$.ajax({ url: 'images/exhibition/01.txt', type: 'get', dataType: 'text', async: false, success: function (title01) { $('#link01').attr('data-title', title01) } }); $('#link01').attr('data-lightbox', '0'); $('#figure01').css({ display: 'inline-flex' });" /></a></figure>
+        </div>
+    </main>
+
+    <footer>
+        <div>© 2018 Manon Jacob</div>
+    </footer>
+
+</body>
+</html>
