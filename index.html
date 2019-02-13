@@ -1,38 +1,49 @@
-﻿<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <link href="src/style.css" rel="stylesheet">
-    <script src="src/jquery.js"></script>
-    <script src="src/script.js"></script>
-    <script src="src/lightbox.js"></script>
-    <link rel="shortcut icon" href="src/img/icon.png" type="image/png" />
-    <title>MANON JACOB</title>
-    <meta name="description" content="MANON JACOB | Official Website">
-    <meta name="robots" content="index" />
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<link rel="stylesheet" type="text/css" href="src/style.css" />
+		<script src="src/modernizr.custom.js"></script>
+		<script src="src/lightbox-plus-jquery.min.js"></script>
+		<script src="src/masonry.pkgd.min.js"></script>
+		<script src="src/javascript.js"></script>
+		<link rel="shortcut icon" href="src/img/icon.png" type="image/png" />
+		<meta name="description" content="MANON JACOB | Official Website">
+		<meta name="robots" content="index" />
+		<title>MANON JACOB</title>
+	</head>
 
-<body>
+	<body class = "container">
+			<header>
+				<a id="active" href="/">MANON JACOB</a>
+				<nav><a href="information">Information</a></nav>
+			</header>
 
-    <noscript><div id="noscript">This site requires JavaScript. Please enable JavaScript in your Browser.</div></noscript>
+			<main class="grid effect-2" id="grid">
 
-    <header>
-        <a id="active" href="/">MANON JACOB</a>
-        <nav>
-            <div><a href="2017-huile-sur-toile">PAINTING</a></div>
-            <div><a href="exhibition">EXHIBITION</a></div>
-            <div><a href="formation">CV</a></div>
-        </nav>
-    </header>
+				<!-- EDIT HERE! -->
+				<!-- <figure><a href="LINK"><img src="images/FOLDER/FILENAME.jpg" alt="" /><div><span>OVERLAY TEXT</span></div></a></figure> -->
+				<figure><a href="catastrophe"><img src="images/Catastrophe/start.jpg" alt="" /><div><span>Catastrophe</span></div></a></figure>
+				<figure><a href="gouache"><img src="images/Gouache/start.jpg" alt="" /><div><span>Gouache</span></div></a></figure>
 
-    <main id="front">
-        <figure id="figure01"><a id="link01" href="images/!front/front.jpg" data-lightbox="0"><img id="image01" src="images/!front/front.jpg" alt="" onload="$.ajax({ url: 'images/!front/front.txt', type: 'get', dataType: 'text', async: false, success: function (title01) { $('#link01').attr('data-title', title01) }}); $('#figure01').css({ display: 'inline-flex' });" /></a></figure>
-    </main>
+				<figure><a href="dna"><img src="images/DNA/start.jpg" alt="" /><div><span>DNA</span></div></a></figure>
 
-    <footer>
-        <div>© 2018 Manon Jacob</div>
-    </footer>
+				<figure><a href="moyen"><img src="images/Moyen/start.jpg" alt="" /><div><span>Moyen</span></div></a></figure>
+				<figure><a href="fusain"><img src="images/Fusain/start.jpg" alt="" /><div><span>Fusain</span></div></a></figure>
 
-</body>
+				<figure><a href="tissus"><img src="images/Tissus/start.jpg" alt="" /><div><span>Tissus</span></div></a></figure>
+				<figure><a href="vegetation"><img src="images/Végétation/start.jpg" alt="" /><div><span>Végétation</span></div></a></figure>
+				<figure><a href="encre-de-chine"><img src="images/Encre de chine/start.jpg" alt="" /><div><span>Encre de chine</span></div></a></figure>
+
+				<figure><a href="screenshots"><img src="images/Screenshots/start.jpg" alt="" /><div><span>Screenshots</span></div></a></figure>
+				
+				<!-- ########### -->
+
+
+			</main>
+
+			<footer>© 2019 Manon Jacob</footer>
+	</body>
 </html>
