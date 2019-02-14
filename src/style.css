@@ -11,11 +11,11 @@
 	font-weight: normal;
 }
 
-img {
+#information {
     
-    position: relative;
+    position: absolute;
     margin-left:900px;
-    max-width: 250px
+    max-width: 250px;
         
     }
 
