@@ -11,6 +11,12 @@
 	font-weight: normal;
 }
 
+#contact img {
+    display: none;
+    margin-top: 2px;
+    margin-right:40px;
+    }
+    
 
 header {
 	max-width: 1300px;
