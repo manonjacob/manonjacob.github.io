@@ -22,7 +22,8 @@
 
 .copy {
     position: absolute;
-    margin-left: 900px
+    margin-left: 900px;
+    font-size:7px;
 
     
     }
