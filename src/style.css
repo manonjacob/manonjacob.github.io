@@ -11,10 +11,12 @@
 	font-weight: normal;
 }
 
-#contact img {
-   
-    margin-top: 2px;
-    margin-right:40px;
+img {
+    
+    position: absolute;
+    margin-left:900px;
+    max-width: 250px
+        
     }
     
 
