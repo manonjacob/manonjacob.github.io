@@ -19,6 +19,14 @@
         
     }
 
+
+.copy {
+    position: absolute;
+    margin-left: 900px
+
+    
+    }
+
 header {
 	max-width: 1300px;
 	margin: 70px auto 0px auto;
