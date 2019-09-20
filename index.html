@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Objets</title>
+	<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="leaflet.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="librairies/jquery-1.12.4.js"></script>
+	<script src="librairies/leaflet.js"></script>
+	<script src="coordonnees.js"></script>
+	<script src="legendes.js"></script>
+</head>
+
+<body>
+ 	<div id="carte"></div>
+
+	<script type="text/javascript">
+
+
+	$(document).ready(function() {
+
+        // On initie les paramètres de la carte
+		var mapMinZoom = 4;
+        var mapMaxZoom = 6;
+        var map = L.map('carte', {
+          maxZoom: mapMaxZoom,
+          minZoom: mapMinZoom,
+          crs: L.CRS.Simple
+        }).setView([0, 0], 6);
+        
+        var mapBounds = new L.LatLngBounds(
+            map.unproject([0, 6656], mapMaxZoom),
+            map.unproject([10240, 0], mapMaxZoom));
+            
+        map.fitBounds(mapBounds);
+
+        // On ajoute le fond àla carte en spécifiant la structure des images tiles
+        L.tileLayer('image_tiles/{z}/{x}/{y}.png', {
+          minZoom: mapMinZoom, maxZoom: mapMaxZoom,
+          bounds: mapBounds,
+          attribution: '',
+          noWrap: true          
+        }).addTo(map);
+
+        // On définit l'icone qui sera utilisée sur chaque marqueur
+    	var icone = L.divIcon({
+    		className: 'icone',
+    		iconSize: [12, 12]
+    	});
+
+
+        // Boucle pour chaque coordonnée
+    	for (var i=0; i<coordonnees.length; i++) {
+    
+            // On crée un marqueur pour chaque coordonnée
+    		L.marker([coordonnees[i][1], coordonnees[i][2]], {icon: icone, id:coordonnees[i][0]})
+    			.addTo(map)
+    			.on('click', function(event) {
+    				var id = event.target.options.id; // on récupère l'id de marqueur cliqué
+    				var souris_x = event.originalEvent.clientX; // on récupère les position  de souris
+    				var souris_y = event.originalEvent.clientY; // on récupère les position  de souris
+
+    				var legende_objet = legendes[id]; // va chercher les données de légende de l'id correspondant
+					var auteur = legende_objet.auteur;
+					var date = legende_objet.date;
+					var titre = legende_objet.titre;
+
+                    // On ajoute l'image dans une div "popup" sur la page
+    				$("body").append("<div class='popup'><img src='images/"+id+".jpg' style='top:"+souris_y+"px;left:"+souris_x+"px;'></div>")
+				    
+                    // On ajoute la légende sur la page
+                   	$("body").append("<div class='legende'>"+auteur+"<br />"+titre+"<br />"+date+"</div>");
+				});
+    	}
+
+        // On supprime le popup et la légende pour revenir à la carte au click sur le popup ou la légende
+    	$(document).on("click", ".popup, .legende", function() {
+    		$(".popup").remove();
+    		$(".legende").remove();
+    	});
+
+        // On déplace l'image en suivant la souris lorsque la souris se déplace sur le popup
+    	$(document).on("mousemove", ".popup", function(event) {
+    		var souris_x = event.clientX;
+    		var souris_y = event.clientY;
+    		$(".popup > img").css({
+    			"top":souris_y,
+    			"left":souris_x
+    		});
+    	});
+
+
+	});
+
+	</script>
+</body>
+
+</html>
