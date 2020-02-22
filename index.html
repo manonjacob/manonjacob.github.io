@@ -1,100 +1,51 @@
-<!doctype html>
-<html lang="fr">
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<link rel="stylesheet" type="text/css" href="src/style.css" />
+		<script src="src/modernizr.custom.js"></script>
+		<script src="src/lightbox-plus-jquery.min.js"></script>
+		<script src="src/masonry.pkgd.min.js"></script>
+		<script src="src/javascript.js"></script>
+		<link rel="shortcut icon" href="src/img/icon.png" type="image/png" />
+		<meta name="description" content="MANON JACOB | Official Website">
+		<meta name="robots" content="index" />
+		<title>MANON JACOB</title>
+	</head>
 
-<head>
-	<meta charset="utf-8">
-	<title>Objets</title>
-	<link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="leaflet.css" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="librairies/jquery-1.12.4.js"></script>
-	<script src="librairies/leaflet.js"></script>
-	<script src="coordonnees.js"></script>
-	<script src="legendes.js"></script>
-</head>
+	<body class = "container">
+			<header>
+				<a id="active" href="/">MANON JACOB</a>
+				<nav><a href="information">Information</a></nav>
+			</header>
 
-<body>
- 	<div id="carte"></div>
+			<main class="grid effect-2" id="grid">
 
-	<script type="text/javascript">
+				<!-- EDIT HERE! -->
+				<!-- <figure><a href="LINK"><img src="images/FOLDER/FILENAME.jpg" alt="" /><div><span>OVERLAY TEXT</span></div></a></figure> -->
+				
+				<figure><a href="gouache"><img src="images/Gouache/start.jpg" alt="" /><div><span>Gouache</span></div></a></figure>
 
+				<figure><a href="dna"><img src="images/DNA/start.jpg" alt="" /><div><span>DNA</span></div></a></figure>
 
-	$(document).ready(function() {
+				<figure><a href="moyen"><img src="images/Moyen/start.jpg" alt="" /><div><span>Moyen</span></div></a></figure>
+                
+				<figure><a href="monotype"><img src="images/Monotype/start.jpg" alt="" /><div><span>Monotype</span></div></a></figure>
 
-        // On initie les paramètres de la carte
-		var mapMinZoom = 4;
-        var mapMaxZoom = 6;
-        var map = L.map('carte', {
-          maxZoom: mapMaxZoom,
-          minZoom: mapMinZoom,
-          crs: L.CRS.Simple
-        }).setView([0, 0], 6);
-        
-        var mapBounds = new L.LatLngBounds(
-            map.unproject([0, 6656], mapMaxZoom),
-            map.unproject([10240, 0], mapMaxZoom));
-            
-        map.fitBounds(mapBounds);
+				<figure><a href="lumièredété"><img src="images/Lumière d'été/start.jpg" alt="" /><div><span>Lumière d'été</span></div></a></figure>
+				<figure><a href="vegetation"><img src="images/Végétation/start.jpg" alt="" /><div><span>Végétation</span></div></a></figure>
+				<figure><a href="memories"><img src="images/Memories/start.jpg" alt="" /><div><span>Memories</span></div></a></figure>
 
-        // On ajoute le fond àla carte en spécifiant la structure des images tiles
-        L.tileLayer('image_tiles/{z}/{x}/{y}.png', {
-          minZoom: mapMinZoom, maxZoom: mapMaxZoom,
-          bounds: mapBounds,
-          attribution: '',
-          noWrap: true          
-        }).addTo(map);
-
-        // On définit l'icone qui sera utilisée sur chaque marqueur
-    	var icone = L.divIcon({
-    		className: 'icone',
-    		iconSize: [12, 12]
-    	});
+				<figure><a href="screens"><img src="images/Screens/start.jpg" alt="" /><div><span>Screens</span></div></a></figure>
+                <figure><a href="catastrophe"><img src="images/Catastrophe/start.jpg" alt="" /><div><span>Catastrophe</span></div></a></figure>
+                
+				<!-- ########### -->
 
 
-        // Boucle pour chaque coordonnée
-    	for (var i=0; i<coordonnees.length; i++) {
-    
-            // On crée un marqueur pour chaque coordonnée
-    		L.marker([coordonnees[i][1], coordonnees[i][2]], {icon: icone, id:coordonnees[i][0]})
-    			.addTo(map)
-    			.on('click', function(event) {
-    				var id = event.target.options.id; // on récupère l'id de marqueur cliqué
-    				var souris_x = event.originalEvent.clientX; // on récupère les position  de souris
-    				var souris_y = event.originalEvent.clientY; // on récupère les position  de souris
+			</main>
 
-    				var legende_objet = legendes[id]; // va chercher les données de légende de l'id correspondant
-					var auteur = legende_objet.auteur;
-					var date = legende_objet.date;
-					var titre = legende_objet.titre;
-
-                    // On ajoute l'image dans une div "popup" sur la page
-    				$("body").append("<div class='popup'><img src='images/"+id+".jpg' style='top:"+souris_y+"px;left:"+souris_x+"px;'></div>")
-				    
-                    // On ajoute la légende sur la page
-                   	$("body").append("<div class='legende'>"+auteur+"<br />"+titre+"<br />"+date+"</div>");
-				});
-    	}
-
-        // On supprime le popup et la légende pour revenir à la carte au click sur le popup ou la légende
-    	$(document).on("click", ".popup, .legende", function() {
-    		$(".popup").remove();
-    		$(".legende").remove();
-    	});
-
-        // On déplace l'image en suivant la souris lorsque la souris se déplace sur le popup
-    	$(document).on("mousemove", ".popup", function(event) {
-    		var souris_x = event.clientX;
-    		var souris_y = event.clientY;
-    		$(".popup > img").css({
-    			"top":souris_y,
-    			"left":souris_x
-    		});
-    	});
-
-
-	});
-
-	</script>
-</body>
-
+			<footer>© 2019 Manon Jacob</footer>
+	</body>
 </html>
