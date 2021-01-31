@@ -1,10 +1,10 @@
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,300i,400i,500i,700i');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
 
 * {
-	color: black;
+	color: #d4d269;
 	text-decoration: none;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'IBM Plex Mono', monospace;
 	padding: 0;
 	margin: 0;
 	line-height: 1;
@@ -33,19 +33,19 @@ header {
 	max-width: 1300px;
 	margin: 70px auto 0px auto;
 	height: 130px;
-	font-size: 30px;
+	font-size: 80px;
 	
 }
 
 #active {
-	color:#1d0085}
+	color:#d4d269}
 
 header a {
 	margin: 0px 7px;
 }
 
 nav {
-	font-size: 24px;
+	font-size: 80px;
 	float: right;
 }
 
