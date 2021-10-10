@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
 
 * {
-	color: #d4d269;
+	color: #000000;
 	text-decoration: none;
 	font-family: 'IBM Plex Mono', monospace;
 	padding: 0;
@@ -38,7 +38,7 @@ header {
 }
 
 #active {
-	color:#d4d269}
+	color:#000000}
 
 header a {
 	margin: 0px 7px;
