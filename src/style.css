@@ -31,8 +31,7 @@
 
 header {
 	max-width: 1300px;
-	margin: 70px auto 0px auto;
-	height: 130px;
+	margin: 70px auto 80px auto;
 	font-size: 60px;
 	
 }
@@ -41,7 +40,7 @@ header {
 	color:#000000}
 
 header a {
-	margin: 0px 7px;
+	margin: 0px 0px;
 }
 
 nav {
@@ -56,6 +55,7 @@ main {
 	margin-right: auto;
 }
 
+
 article {
 	margin: auto 7px;
 }
@@ -67,6 +67,11 @@ h1 {
 p {
 
 }
+
+.txtboutique {
+    margin-bottom: 30px;
+}
+
 
 .cv1 {
     position: absolute;
@@ -134,10 +139,10 @@ footer {
 }
 
 #instagram {
-	width: 28px;
+	width: 25px;
 	position: fixed;
-		bottom: 13px;
-		right: 13px;
+	bottom: 14px;
+	right: 14px;
 }
 
 
@@ -291,6 +296,7 @@ figure {
 }
 
 
+
 .grid {
 	list-style: none;
 	margin: 0 auto;
@@ -327,6 +333,8 @@ figure {
 	animation: moveUp 0.65s ease forwards;
 }
 
+
+
 @-webkit-keyframes moveUp {
 	0% { }
 	100% { -webkit-transform: translateY(0); opacity: 1; }
@@ -338,16 +346,25 @@ figure {
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
 	html, body {
 		min-width: 100px;
 	}
-	.grid figure {
-		width: 100%;
+
+	header {
+		margin-top: 40px;
+		margin-bottom: 50px;
 	}
-	body, html { font-size: 100%; padding: 0; margin: 0 15px auto 15px;}
+
+	.grid figure {
+		width: 50%;
+	}
+	body, html {
+		font-size: 100%; padding: 0; margin: 0 15px auto 15px;
+	}
+
 	nav {
-		font-size: 24px;
+		font-size: 40px;
 		float: inherit;
 		margin-top: 10px;
 	}
@@ -359,4 +376,35 @@ figure {
 	}
 }
 
+
+@media screen and (max-width: 500px) {
+	html, body {
+		min-width: 100px;
+	}
+
+	header a {
+		display:table-caption;
+	}
+
+	header {
+		margin-top: 30px;
+		margin-bottom: 40px
+	}
+
+	.grid figure {
+		width: 100%;
+	}
+	body, html { font-size: 100%; padding: 0; margin: 0 15px auto 15px;}
+	nav {
+		font-size: 40px;
+		float: inherit;
+		margin-top: 10px;
+	}
+	.cv1 {
+		position: relative;
+	}
+	.cv2 {
+		margin-left: 0;
+	}
+}
 
