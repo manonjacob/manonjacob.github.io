@@ -134,6 +134,13 @@ footer {
 	font-size: 12px;
 }
 
+#boutique {
+	width: 30px;
+	position: fixed;
+	bottom: 85px;
+	right: 13px;
+}
+
 #email {
 		width: 28px;
 		position: fixed;
@@ -149,6 +156,7 @@ footer {
 	bottom: 14px;
 	right: 14px;
 }
+
 
 
 /*###############################################CONTACT*/
