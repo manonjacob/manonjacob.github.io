@@ -48,6 +48,11 @@ nav {
 	float: right;
 }
 
+nav1 {
+	font-size: 30px;
+	float: left;
+}
+
 main {
 	min-height: 100%;
 	max-width: 1300px;
@@ -368,6 +373,11 @@ figure {
 		float: inherit;
 		margin-top: 10px;
 	}
+	nav1 {
+		font-size: 30px;
+		float: inherit;
+		margin-top: 30px;
+	}
 	.cv1 {
 		position: relative;
 	}
@@ -399,6 +409,11 @@ figure {
 		font-size: 40px;
 		float: inherit;
 		margin-top: 10px;
+	}
+	nav1 {
+		font-size: 30px;
+		float: inherit;
+		margin-top: 30px;
 	}
 	.cv1 {
 		position: relative;
