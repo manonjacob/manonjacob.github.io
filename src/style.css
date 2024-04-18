@@ -4,7 +4,7 @@
 * {
 	color: #86861c;
 	text-decoration: none;
-	font-family: 'Roboto' ;
+	font-family: 'Inter' ;
 	padding: 0;
 	margin: 0;
 	line-height: 1;
@@ -194,7 +194,7 @@ input[type=email] {
     margin: 0 0 23px 0;
     padding: 2px 4px 2px 4px;
     border: 1px solid #999999;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 9.5pt;
     font-weight: 300;
     color: #86861c;
@@ -213,7 +213,7 @@ input[name=_subject] {
     margin: 0 0 23px 0;
     padding: 2px 4px 2px 4px;
     border: 1px solid #999999;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter';
     font-size: 9.5pt;
     font-weight: 300;
     color: #86861c;
@@ -233,7 +233,7 @@ textarea[name=message] {
     margin: 0 0 21px 0;
     padding: 2px 4px 2px 4px;
     border: 1px solid #999999;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter';
     font-size: 9.5pt;
     font-weight: 300;
     color: #86861c;
@@ -251,7 +251,7 @@ input[type=submit] {
     margin: 15px 0 0 0;
     padding: 0;
     border: 1px solid #222222;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter';
     font-size: 11pt;
     color: white;
     background-color: #222222;
@@ -267,7 +267,7 @@ input:active[type=submit] {
 p {
     padding: 0;
     margin: 0 0 6px 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter';
     font-size: 11pt;
     line-height: 14px;
     color: #86861c;
