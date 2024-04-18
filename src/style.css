@@ -37,7 +37,7 @@ header {
 }
 
 #active {
-	color:#000000}
+	color:#86861c}
 
 header a {
 	margin: 0px 0px;
@@ -197,7 +197,7 @@ input[type=email] {
     font-family: 'Roboto', sans-serif;
     font-size: 9.5pt;
     font-weight: 300;
-    color: #222222;
+    color: #86861c;
 }
 
     input[type=email]:focus {
@@ -216,7 +216,7 @@ input[name=_subject] {
     font-family: 'Roboto', sans-serif;
     font-size: 9.5pt;
     font-weight: 300;
-    color: #222222;
+    color: #86861c;
 }
 
     input[name=_subject]:focus {
@@ -236,11 +236,11 @@ textarea[name=message] {
     font-family: 'Roboto', sans-serif;
     font-size: 9.5pt;
     font-weight: 300;
-    color: #222222;
+    color: #86861c;
 }
 
     textarea[name=message]:focus {
-        border: 1px solid #222222;
+        border: 1px solid #86861c;
     }
 
 input[type=submit] {
@@ -270,7 +270,7 @@ p {
     font-family: 'Roboto', sans-serif;
     font-size: 11pt;
     line-height: 14px;
-    color: #222222;
+    color: #86861c;
 }
 
 
