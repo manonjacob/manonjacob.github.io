@@ -32,7 +32,7 @@
 header {
 	max-width: 1300px;
 	margin: 70px auto 80px auto;
-	font-size: 60px;
+	font-size: 30px;
 	
 }
 
@@ -44,7 +44,7 @@ header a {
 }
 
 nav {
-	font-size: 60px;
+	font-size: 30px;
 	float: right;
 }
 
