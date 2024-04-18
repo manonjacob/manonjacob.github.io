@@ -135,17 +135,17 @@ footer {
 }
 
 #boutique {
-	width: 30px;
+	width: 25px;
 	position: fixed;
-	bottom: 85px;
-	right: 13px;
+	bottom: 74px;
+	right: 14px;
 }
 
 #email {
-		width: 28px;
-		position: fixed;
-		bottom: 43px;
-		right: 13px;
+	width: 25px;
+	position: fixed;
+	bottom: 44px;
+	right: 14px;
 
 
 }
