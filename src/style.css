@@ -320,7 +320,7 @@ figure {
 	display: block;
 	float: left;
 	padding: 7px;	        /* Spaltenanzahl */
-	width: 50%;				/* Spaltenanzahl */
+	width: 33%;				/* Spaltenanzahl */
 	opacity: 0;
 }
 
