@@ -412,10 +412,10 @@ figure {
 	.grid figure {
 		width: 50%;
 	}
-	body, html { font-size: 50%; padding: 0; margin: 0 15px auto 15px;}
+	body, html { font-size: absolute; padding: 0; margin: 0 15px auto 15px;}
 	nav {
 		font-size: 14px;
-		float: left;
+		float: inherit;
 		margin-top: 10px;
 	}
 	nav1 {
@@ -424,7 +424,7 @@ figure {
 		margin-top: 30px;
 	}
 	.cv1 {
-		position: absolute;
+		position: relative;
 	}
 	.cv2 {
 		margin-left: 0;
