@@ -415,7 +415,7 @@ figure {
 	body, html { font-size: 50%; padding: 0; margin: 0 15px auto 15px;}
 	nav {
 		font-size: 14px;
-		float: inherit;
+		float: left;
 		margin-top: 10px;
 	}
 	nav1 {
